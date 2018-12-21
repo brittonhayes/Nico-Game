@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/animate.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emoticon {
+      white-space: pre;
+    }
+
+    .gameText {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar " role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="./img/duck-hunt.png" width="60" height="28">
+        </a>
+  
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+  
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="about.html" class="navbar-item">
+            About
+          </a>
+  
+          <a class="navbar-item">
+            Documentation
+          </a>
+  
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+  
+            <div class="navbar-dropdown">
+              <a href="retro.html" class="navbar-item">
+                UI/UX
+              </a>
+              <a class="navbar-item">
+                Contact Us
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Play Now</strong>
+              </a>
+              <a href="retro.html" class="button is-light" target="_blank">
+                Prototype
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- .hero -->
+  <section class="hero has-background-primary is-bold is-marginless is-fullheight">
+    <div class="hero-body">
+      <div class="container gameText bounceInDown animated">
+        <div class="title is-1 center has-text-light">Nico's RPG</div>
+        <div class="subtitle center has-text-light">A Java-Based Experience</div>
+        <figure class="image center">
+          <a href="/retro.html">
+            <img src="img/duck-hunt.png" style="max-width: 160px;">
+          </a>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+  <!-- /.hero -->
+
+</body>
+
+</html>
