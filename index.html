@@ -26,8 +26,11 @@
       font-family: 'Press Start 2P', cursive;
     }
 
-    body {
+    body,
+    html {
       overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -35,62 +38,62 @@
 <body>
 
   <nav class="navbar " role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img src="./img/duck-hunt.png" width="60" height="28">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="./img/duck-hunt.png" width="60" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="about.html" class="navbar-item">
+          About
         </a>
-  
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+
+        <a class="navbar-item">
+          Documentation
         </a>
-      </div>
-  
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="about.html" class="navbar-item">
-            About
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
           </a>
-  
-          <a class="navbar-item">
-            Documentation
-          </a>
-  
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
+
+          <div class="navbar-dropdown">
+            <a href="retro.html" class="navbar-item">
+              UI/UX
             </a>
-  
-            <div class="navbar-dropdown">
-              <a href="retro.html" class="navbar-item">
-                UI/UX
-              </a>
-              <a class="navbar-item">
-                Contact Us
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Play Now</strong>
-              </a>
-              <a href="retro.html" class="button is-light" target="_blank">
-                Prototype
-              </a>
-            </div>
+            <a class="navbar-item">
+              Contact Us
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
           </div>
         </div>
       </div>
-    </nav>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Play Now</strong>
+            </a>
+            <a href="prototype.html" class="button is-light" target="_blank">
+              Prototype
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <!-- .hero -->
   <section class="hero has-background-primary is-bold is-marginless is-fullheight">
@@ -99,7 +102,7 @@
         <div class="title is-1 center has-text-light">Nico's RPG</div>
         <div class="subtitle center has-text-light">A Java-Based Experience</div>
         <figure class="image center">
-          <a href="/retro.html">
+          <a href="/index.html">
             <img src="img/duck-hunt.png" style="max-width: 160px;">
           </a>
         </figure>
