@@ -1,65 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <link href="./NES_files/css" rel="stylesheet">
-  <link href="./NES_files/nes.min.css" rel="stylesheet">
-  <link href="./NES_files/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <title>Nico's RPG</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emoticon {
+      white-space: pre;
+    }
+
+    .gameText {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1><i class="snes-jp-logo brand"></i>Nico's RPG</h1>
-    <p>A Java-Based Experience</p>
-  </header>
 
-  <section class="nes-container with-title">
-    <h2 class="title">Character Select</h2>
-    <div>
-      <button type="button" class="nes-btn is-disabled">Nico</button>
-      
-      <a href="home.html"><button type="button" class="nes-btn is-primary">Britt</button></a>
-      <button type="button" class="nes-btn is-primary">Ben</button>
-      <button type="button" class="nes-btn is-primary">Zack</button>
-      <button type="button" class="nes-btn is-primary">Nicole</button>
-    </div>
-  </section>
-  <section class="nes-container with-title">
-    <h2 class="title">Sign In</h2>
-    <div class="nes-field">
-      <label for="name_field">Name</label>
-      <input type="text" id="name_field" class="nes-input">
-    </div>
-    <div class="field">
-      <label for="textarea_field">Preferred Class?</label>
-      <textarea id="textarea_field" class="nes-textarea"></textarea>
-    </div>
-  </section>
-  <section class="balloon from-left nes-container with-title ">
-    <h2 class="title">Dialogue</h2>
-    <div class="messages">
-      <div class="message -left">
-        <i class="nes-bcrikko"></i>
-        <div class="nes-balloon from-left">
-          <p>aye nibba, it's me nico</p>
-        </div>
-      </div>
-      <div class="message -right">
-        <div class="nes-balloon from-right">
-          <p>oh shit bud, how you doin?</p>
-        </div>
-        <i class="nes-bcrikko"></i>
+  <!-- .hero -->
+  <section class="hero has-background-info">
+    <div class="hero-body">
+      <div class="container gameText">
+        <div class="title is-1 center has-text-light">Nico's RPG</div>
+        <div class="subtitle center has-text-light">A Java-Based Experience</div>
+        <figure class="image center">
+          <img src="img/duck-hunt.png" style="max-width: 160px;">
+
+        </figure>
+
       </div>
     </div>
   </section>
+  <!-- /.hero -->
 
+  <section class="section has-background-light">
+
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <article class="media notification is-info">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <img src="img/crosshair.png" style="max-width: 46px;">
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Sniper</h1>
+                <p class="is-size-5">
+                  Whip on fools from a distance big boi. Belltowers for days.
+                </p>
+              </div>
+            </div>
+          </article>
+          <a class="button is-success">Play Sniper</a>
+
+        </div>
+        <div class="column">
+          <article class="media notification is-info">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <img src="img/bullets.png" style="max-width: 46px;">
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Support</h1>
+                <p class="is-size-5">
+                  Re-Supply your squadmates. Suppress the enemy. Be a boss.
+                </p>
+              </div>
+            </div>
+          </article>
+          <a class="button is-success">Play Support</a>
+
+
+        </div>
+        <div class="column">
+          <article class="media notification is-info">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <img src="img/medic.png" style="max-width: 46px;">
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Medic</h1>
+                <p class="is-size-5">
+                  Heal your buddies. Use that syringe to pick up fallen good bois.
+                </p>
+              </div>
+            </div>
+          </article>
+          <a class="button is-success">Play Medic</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <section class="has-background-light">
+    <div class="container center">
+      <iframe type='text/html' width='640' height='424' src='http://www.stencyl.com/game/embed/10605' frameborder='0'
+        scrolling='no'></iframe>
+    </div>
+  </section>
+
+
+  <!-- .section -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon">
+                <i class="fas fa-lg fa-columns has-text-warning"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Columns</h1>
+                <p class="subtitle is-size-5">
+                  The power of <strong>Flexbox</strong> in a simple interface
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon has-text-info">
+                <i class="fab fa-lg fa-wpforms"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Form</h1>
+                <p class="subtitle is-size-5">
+                  The indispensable <strong>form controls</strong>, designed for maximum clarity
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon has-text-danger">
+                <i class="fas fa-lg fa-cubes"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Components</h1>
+                <p class="subtitle is-size-5">
+                  Advanced multi-part components with lots of possibilities
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon has-text-grey">
+                <i class="fas fa-lg fa-cogs"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Modifiers</h1>
+                <p class="subtitle is-size-5">
+                  An <strong>easy-to-read</strong> naming system designed for humans
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon has-text-primary">
+                <i class="fas fa-lg fa-warehouse"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Layout</h1>
+                <p class="subtitle is-size-5">
+                  Design the <strong>structure</strong> of your webpage with these CSS classes
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="media notification has-background-white">
+            <figure class="media-left">
+              <span class="icon has-text-danger">
+                <i class="fas fa-lg fa-cube"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Elements</h1>
+                <p class="subtitle is-size-5">
+                  Essential interface elements that only require a <strong>single CSS class</strong>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Nico's RPG</strong>
+        <p>Nicolas Espitia + Britton Hayes</p>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
