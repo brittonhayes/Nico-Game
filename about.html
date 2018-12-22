@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/animate.css">
   <link rel="stylesheet" href="./styles/main.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     .center {
         display: flex;
@@ -24,6 +25,10 @@
   
       .gameText {
         font-family: 'Press Start 2P', cursive;
+      }
+
+      .character {
+        float: left;
       }
 
     </style>
@@ -65,7 +70,7 @@
 
           <div class="navbar-dropdown">
 
-            <a class="navbar-item">
+            <a href="contact.html" class="navbar-item">
               Contact Us
             </a>
             <hr class="navbar-divider">
@@ -109,7 +114,7 @@
   <!-- /.hero -->
 
   <section class="section container">
-    <div class="content is-large">
+    <div class="content is-medium">
       <h1 class="title is-capitalized is-size-1">A Modern RPG</h1>
       <h2 class="subtitle has-text-grey is-4">By Britton</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <strong>irure dolor</strong> sed do eiusmod tempor
@@ -119,8 +124,8 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum. <br><br>
         <div class="columns">
-          <div class="column">
-            <article class="media notification is-dark">
+          <div data-aos="fade-right" class="column">
+            <article class="media notification is-primary">
               <div class="media-content">
                 <div class="content is-medium">
                   <h1 class="title">Marksman</h1>
@@ -128,18 +133,19 @@
                     Whip on fools from a distance big boi. Belltowers for days.
                   </p>
                 </div>
+                <figure class="media-left">
+                  <span class="image is-medium">
+                    <img src="img/crosshair.png" style="max-width: 96px;">
+                  </span>
+                </figure>
               </div>
-              <figure class="media-left">
-                <span class="icon is-medium">
-                  <img src="img/crosshair.png" style="max-width: 96px;">
-                </span>
-              </figure>
+
             </article>
             <!-- <a class="button is-success">Play Sniper</a> -->
 
           </div>
-          <div class="column">
-            <article class="media notification is-dark">
+          <div data-aos="fade-left"  class="column">
+            <article class="media notification is-primary">
               <div class="media-content">
                 <div class="content is-medium">
                   <h1 class="title">Support</h1>
@@ -147,18 +153,19 @@
                     Re-Supply your squadmates. Suppress the enemy. Be a boss.
                   </p>
                 </div>
+                <figure class="media-left">
+                  <span class="image is-medium">
+                    <img src="img/bullets.png" style="max-width: 96px;">
+                  </span>
+                </figure>
               </div>
-              <figure class="media-left">
-                <span class="icon is-medium">
-                  <img src="img/bullets.png" style="max-width: 96px;">
-                </span>
-              </figure>
+
             </article>
             <!-- <a class="button is-success">Play Support</a> -->
 
           </div>
-          <div class="column">
-            <article class="media notification is-dark">
+          <div data-aos="fade-right"  class="column">
+            <article class="media notification is-primary">
               <div class="media-content">
                 <div class="content is-medium">
                   <h1 class="title">Medic</h1>
@@ -166,13 +173,12 @@
                     Heal your buddies. Use that syringe to pick up fallen good bois.
                   </p>
                 </div>
+                <figure class="media-right">
+                  <span class="image">
+                    <img src="img/medic.png" style="max-width: 96px;">
+                  </span>
+                </figure>
               </div>
-              <figure class="media-left">
-                <span class="icon is-medium">
-                  <img src="img/medic.png" style="max-width: 96px;">
-                </span>
-              </figure>
-
             </article>
             <!-- <a class="button is-success">Play Medic</a> -->
 
@@ -200,6 +206,7 @@
       </p>
     </div>
 
+    <!-- navbarJS -->
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', () => {
 
@@ -227,8 +234,13 @@
 
       });
     </script>
-
+    <!-- /navbarJS -->
   </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
