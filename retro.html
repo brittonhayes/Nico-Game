@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:title" content="UI/UX" />
   <meta property="og:image" content="img/richPreview.png" />
+
   <title>UI/UX | Nico's RPG</title>
+
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link href="./NES_files/css" rel="stylesheet">
@@ -15,24 +17,26 @@
   <link href="./NES_files/style.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/v4-shims.js"></script>
+  <style>
+    .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .emoticon {
+          white-space: pre;
+        }
+    
+        .gameText {
+          font-family: 'Press Start 2P', cursive;
+        }
+    
+      </style>
 </head>
-
-<style>
-  .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .emoticon {
-      white-space: pre;
-    }
-
-    .gameText {
-      font-family: 'Press Start 2P', cursive;
-    }
-
-  </style>
 
 <body>
 
@@ -99,7 +103,7 @@
   <!-- /navbar -->
 
   <div class="container">
-    <section class="nes-container with-title has-background-light">
+    <section class="nes-container with-title">
       <h2 class="title">Character Select</h2>
       <div>
         <button type="button" class="nes-btn is-primary">Nico</button>
@@ -109,7 +113,8 @@
         <button type="button" class="nes-btn is-primary">Nicole</button>
       </div>
     </section>
-    <section class="nes-container with-title has-background-light">
+
+    <section class="nes-container with-title">
       <h2 class="title">Sign In</h2>
       <div class="nes-field">
         <label for="name_field">Name</label>
@@ -120,7 +125,8 @@
         <textarea id="textarea_field" class="nes-textarea"></textarea>
       </div>
     </section>
-    <section class="balloon from-left nes-container notification with-title ">
+
+    <section class="balloon nes-container with-title">
       <h2 class="title">Dialogue</h2>
       <div class="messages">
         <div class="message -left">
@@ -138,6 +144,7 @@
       </div>
     </section>
   </div>
+
 
   <!-- navbarJS -->
   <script type="text/javascript">
