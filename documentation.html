@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./styles/animate.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/v4-shims.js"></script>
   <!-- <link rel="stylesheet" href="styles/debug.css"> -->
@@ -98,7 +99,7 @@
   <!-- /navbar -->
 
   <!-- .hero -->
-  <section class="hero has-background-primary is-bold is-marginless">
+  <section class="hero is-primary" style="margin-top:0">
     <div class="hero-body">
       <div class="container gameText ">
         <div class="title is-1 center has-text-light">Stats</div>
@@ -113,110 +114,201 @@
     </div>
   </section>
   <!-- /.hero -->
-
-  <!-- table -->
   <div class="container">
-    <table class="table is-fullwidth table is-striped">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Role</th>
-          <th><i class="fas fa-briefcase-medical"></i></th>
-          <th><i class="fa fa-running"></i></th>
-          <th><i class="fas fa-bullseye"></i></i></th>
-        </tr>
-      </thead>
-      <tfoot>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td><a href="#" title="Nico">Nico</a>
-          </td>
-          <td>Support</td>
-          <td>100</td>
-          <td>3</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td><a href="#" title="Britt">Britt</a></td>
-          <td>Marksman</td>
-          <td>75</td>
-          <td>5</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td><a href="#" title="Ben">Ben</a>
-          </td>
-          <td>Medic</td>
-          <td>125</td>
-          <td>4</td>
-          <td>2</td>
-        </tr>
-        <tr class="is-selected">
-          <td><a href="#" title="Zack">Zack</a>
-          </td>
-          <td>Support</td>
-          <td>110</td>
-          <td>4</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td><a href="Nicole" title="Nicole">Nicole</a>
-          </td>
-          <td>Assault</td>
-          <td>130</td>
-          <td>2</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td><a href="#" title="Gavin">Gavin</a></td>
-          <td>Assault</td>
-          <td>160</td>
-          <td>4</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td><a href="#" title="Emily">Emily</a></td>
-          <td>Support</td>
-          <td>100</td>
-          <td>3</td>
-          <td>3</td>
-        </tr>
 
-      </tbody>
-    </table>
-  </div>
-  <!-- /table -->
+    <h1 class="title center">Filters</h1>
+    <div class="container center">
+      <div class="field has-addons">
+        <!-- <p class="control">
+              <a id="filter" class="button is-small is-info is-outlined">
+                <span class="icon is-small">
+                    <i class="fas fa-filter"></i>
+                  </span>
+              </a>
+            </p>
+     -->
+        <p class="control">
+          <a id="recon" class="button is-small is-info is-outlined">
+            <span class="icon is-small">
+              <i class="fas fa-binoculars"></i>
+            </span>
+            <span>Recon</span>
+          </a>
+        </p>
+        <p class="control">
+          <a id="support" class="button is-small is-info is-outlined">
+            <span class="icon is-small">
+              <i class="fas fa-wrench"></i>
+            </span>
+            <span>Support</span>
+          </a>
+        </p>
+        <p class="control">
+          <a id="medic" class="button is-small is-info is-outlined">
+            <span class="icon is-small">
+              <i class="fas fa-briefcase-medical"></i>
+            </span>
+            <span>Medic</span>
+          </a>
+        </p>
+        <p class="control">
+          <a id="assault" class="button is-small is-info is-outlined">
+            <span class="icon is-small">
+              <i class="fas fa-angle-double-up"></i>
+            </span>
+            <span>Assault</span>
+          </a>
+        </p>
+        <p class="control">
+          <a id="delete" class="button is-small is-danger is-outlined">
+            <span class="icon is-small">
+              <i class="fas fa-trash-alt"></i>
+            </span>
+            <span>Clear</span>
+          </a>
+        </p>
+      </div>
 
-  <!-- navbarJS -->
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
+    </div>
 
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    <!-- table -->
+    <div class="container">
+      <table class="table is-fullwidth table is-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th><i class="fas fa-briefcase-medical"></i></th>
+            <th><i class="fa fa-running"></i></th>
+            <th><i class="fas fa-bullseye"></i></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="support">
+            <td><a href="#" title="Nico">Nico</a>
+            </td>
+            <td>Support</td>
+            <td>100</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr class="recon">
+            <td><a href="#" title="Britt">Britt</a></td>
+            <td>Recon</td>
+            <td>75</td>
+            <td>5</td>
+            <td>5</td>
+          </tr>
+          <tr class="medic">
+            <td><a href="#" title="Ben">Ben</a>
+            </td>
+            <td>Medic</td>
+            <td>125</td>
+            <td>4</td>
+            <td>2</td>
+          </tr>
+          <tr class="support">
+            <td><a href="#" title="Zack">Zack</a>
+            </td>
+            <td>Support</td>
+            <td>110</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+          <tr class="assault">
+            <td><a href="Nicole" title="Nicole">Nicole</a>
+            </td>
+            <td>Assault</td>
+            <td>130</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr class="assault">
+            <td><a href="#" title="Gavin">Gavin</a></td>
+            <td>Assault</td>
+            <td>160</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          <tr class="support">
+            <td><a href="#" title="Emily">Emily</a></td>
+            <td>Support</td>
+            <td>100</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- /table -->
 
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
 
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
 
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
 
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
+    <!-- navbarJS -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
 
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+
+            });
           });
-        });
-      }
+        }
 
-    });
-  </script>
-  <!-- /navbarJS -->
+      });
+    </script>
+    <!-- /navbarJS -->
+
+    <script>
+      $(document).ready(function () {
+        $("#recon").click(function () {
+          $(".support,.medic,.assault").hide(),
+          $(".button").removeClass("is-success"),
+          $("#recon").toggleClass("is-success"),
+          $(".recon").show()
+        });
+        $("#support").click(function () {
+          $(".recon,.medic,.assault").hide(),
+          $(".button").removeClass("is-success"),
+          $("#support").toggleClass("is-success"),
+            $(".support").show()
+        });
+        $("#medic").click(function () {
+          $(".support,.recon,.assault").hide(),
+          $(".button").removeClass("is-success"),
+          $("#medic").toggleClass("is-success"),
+            $(".medic").show()
+        });
+        $("#assault").click(function () {
+          $(".recon,.medic,.support").hide(),
+          $(".button").removeClass("is-success"),
+          $("#assault").toggleClass("is-success"),
+          $(".assault").show()
+        });
+        $("#delete").click(function () {
+          $(".button").removeClass("is-success"),
+          $("tr").show(200);
+        });
+      });
+    </script>
 
 </body>
 
