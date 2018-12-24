@@ -220,12 +220,12 @@
             <td>4</td>
           </tr>
           <tr class="medic">
-              <td><a href="#" title="Lexi">Lexi</a></td>
-              <td>Medic</td>
-              <td>150</td>
-              <td>2</td>
-              <td>3</td>
-            </tr>
+            <td><a href="#" title="Lexi">Lexi</a></td>
+            <td>Medic</td>
+            <td>150</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
           <tr class="assault">
             <td><a href="Nicole" title="Nicole">Nicole</a>
             </td>
@@ -285,33 +285,45 @@
 
     <script>
       $(document).ready(function () {
+        $(".support").click(function () {
+          $(".support").toggleClass("is-selected")
+        });
+        $(".recon").click(function () {
+          $(".recon").toggleClass("is-selected")
+        });
+        $(".medic").click(function () {
+          $(".medic").toggleClass("is-selected")
+        });
+        $(".assault").click(function () {
+          $(".assault").toggleClass("is-selected")
+        });
         $("#recon").click(function () {
           $(".support,.medic,.assault").hide(),
-          $(".button").removeClass("is-success"),
-          $("#recon").toggleClass("is-success"),
-          $(".recon").show()
+            $(".button").removeClass("is-success"),
+            $("#recon").toggleClass("is-success"),
+            $(".recon").show()
         });
         $("#support").click(function () {
           $(".recon,.medic,.assault").hide(),
-          $(".button").removeClass("is-success"),
-          $("#support").toggleClass("is-success"),
+            $(".button").removeClass("is-success"),
+            $("#support").toggleClass("is-success"),
             $(".support").show()
         });
         $("#medic").click(function () {
           $(".support,.recon,.assault").hide(),
-          $(".button").removeClass("is-success"),
-          $("#medic").toggleClass("is-success"),
+            $(".button").removeClass("is-success"),
+            $("#medic").toggleClass("is-success"),
             $(".medic").show()
         });
         $("#assault").click(function () {
           $(".recon,.medic,.support").hide(),
-          $(".button").removeClass("is-success"),
-          $("#assault").toggleClass("is-success"),
-          $(".assault").show()
+            $(".button").removeClass("is-success"),
+            $("#assault").toggleClass("is-success"),
+            $(".assault").show()
         });
         $("#delete").click(function () {
-          $(".button").removeClass("is-success"),
-          $("tr").show(200);
+          $(".button").removeClass("is-success is-selected"),
+            $("tr").show(200);
         });
       });
     </script>
