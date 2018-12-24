@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Prototype" />
+  <meta property="og:image" content="img/richPreview.png" />
+
+  <title>Prototype | Nico's RPG</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/animate.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/v4-shims.js"></script>
+  <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emoticon {
+      white-space: pre;
+    }
+
+    .gameText {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="./img/duck-hunt.png" width="60" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="about.html" class="navbar-item">
+          About
+        </a>
+
+        <a href="documentation.html" class="navbar-item">
+          Documentation
+        </a>
+
+        <a href="retro.html" class="navbar-item">
+          UI/UX
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+
+            <a href="contact.html" class="navbar-item">
+              Contact Us
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="play.html" class="button is-link">
+              <strong>Play Now</strong>
+            </a>
+            <a href="prototype.html" class="button is-light">
+              Prototype
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- /navbar -->
+
+    <!-- .hero -->
+    <section class="hero is-link is-fullwidth" style="margin-top:0">
+        <div class="hero-body">
+          <div class="container gameText ">
+            <div class="title is-2 center has-text-light">Demo</div>
+            <div class="subtitle center has-text-light">The main idea</div>
+          </div>
+        </div>
+      </section>
+    
+
+  <!-- .hero -->
+  <section class="hero is-fullwidth center" style="overflow-x:hidden">
+    <!-- <iframe width="1920" height="1080" src="https://xd.adobe.com/embed/36012334-9f2c-46dd-5ab1-6d61c72c8eff-4030/"
+      frameborder="0" allowfullscreen></iframe> -->
+
+    <embed src="http://www.addictinggames.com/newGames/strategy-games/warfare1917/warfare1917.swf" width="800" height="420"
+      menu="false" allowscriptaccess="always" allownetworking="all" name="gameObject" type="application/x-shockwave-flash"
+      pluginspage="http://www.macromedia.com/go/getflashplayer">
+  </section>
+  <!-- /.hero -->
+
+  <!-- navbarJS -->
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+  <!-- /navbarJS -->
+
+</body>
+
+</html>
