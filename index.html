@@ -6,14 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Home" />
   <meta property="og:image" content="img/richPreview.png" />
+
   <title>Home | Nico's RPG</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="./styles/animate.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+
+
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/v4-shims.js"></script>
+
   <!-- <link rel="stylesheet" href="styles/debug.css"> -->
   <style>
     .center {
@@ -36,11 +41,38 @@
       margin: 0;
       padding: 0;
     }
+
+    #hero{
+      background-image: url('./img/hero.jpg');
+      background-size: cover;
+    }
+
+
+
+    @keyframes floating-text {
+      0% {  
+        transform: translateY(.6em);
+        text-shadow: 0 0 .6em rgba(12, 12, 12, 0.4),
+          0 0 .2em rgba(0,0,0,.7),
+          0 .3em .2em rgba(0,0,0,.3);
+
+      }
+      100% {
+        text-shadow:0 0 .7em rgba(12, 12, 12, 0.4),
+          0 0 .2em rgba(0, 0, 0, 0.7),
+          0 .9em .9em rgba(0,0,0,.3);
+      }
+    }
+
+    .mainLogo {
+      animation: floating-text 2s ease-in-out alternate infinite;
+    }
+
   </style>
 </head>
 
 <body>
-
+  
   <!-- navbar -->
   <nav class="navbar " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -90,10 +122,10 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
+            <a href="play.html" class="button is-link">
               <strong>Play Now</strong>
             </a>
-            <a href="prototype.html" class="button is-light" target="_blank">
+            <a href="prototype.html" class="button is-light">
               Prototype
             </a>
           </div>
@@ -103,10 +135,12 @@
   </nav>
   <!-- /navbar -->
 
+  <!-- <canvas id="snow"></canvas> -->
+
   <!-- .hero -->
-  <section class="hero is-primary is-marginless is-fullheight">
+  <section id="hero" class="hero is-primary is-marginless is-fullheight">
     <div class="hero-body">
-      <div class="container gameText bounceInDown animated">
+      <div class="container gameText bounceInDown animated mainLogo">
         <div class="title is-2 center has-text-light">Nico's RPG</div>
         <div class="subtitle center has-text-light">A Java-Based Experience</div>
         <figure class="image center">
@@ -114,11 +148,12 @@
             <img src="img/duck-hunt.png" style="max-width: 160px;">
           </a>
         </figure>
-
+        
       </div>
     </div>
   </section>
   <!-- /.hero -->
+
   <!-- Navbar -->
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
@@ -148,6 +183,7 @@
     });
   </script>
   <!-- /Navbar -->
+  <!-- <script src="/snow.js"></script> -->
 
 </body>
 
