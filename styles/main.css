@@ -19,11 +19,14 @@ section {
   margin-bottom: 3em;
 }
 
+#table {
+  margin-bottom: 3em;
+}
+
 iframe {
   margin-top: -7rem;
   padding: 0px;
 }
-
 
 /* Animations
 ================== */
