@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
 
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/v4-shims.js"></script>
 
@@ -41,9 +41,9 @@
 
     body,
     html {
-      overflow: hidden;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
     #hero{
@@ -139,8 +139,6 @@
     </div>
   </nav>
   <!-- /navbar -->
-  
-  <canvas id="snow"></canvas>
 
   <!-- .hero -->
   <section id="hero" class="hero is-primary is-marginless is-fullheight">
@@ -155,8 +153,27 @@
         </figure>
       </div>
     </div>
+    
   </section>
   <!-- /.hero -->
+
+
+  <div id="particles-js"></div>
+  
+
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
+  <script>
+    particlesJS.load('particles-js',
+      './js/particlesjs.json', function(){
+        console.log('particles.json loaded');
+      });
+  </script>
+
 
   <!-- Navbar -->
   <script type="text/javascript">
@@ -186,8 +203,6 @@
 
     });
   </script>
-  <!-- /Navbar -->
-  <script src="/snow.js"></script>
 
 </body>
 
